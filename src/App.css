@@ -1,5 +1,7 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  background-color: pink;
+  height: 100vh;
 }
 
 .App-logo {
@@ -32,7 +34,24 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.container {
+  padding-top: 20px;
+}
+
+.input {
+  width: 60vw;
+  /* height: 10vh; */
+}
+
+#brocade-img {
+  width: 1250px;
+  height: 400px;
+  margin-left: 20%;
+  /* margin-left: 25% */
 }
