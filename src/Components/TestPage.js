@@ -4,10 +4,8 @@ import img1 from '../img/brocade.jpg'
 export default function TestPage() {
 
     const [title, setTitle] = React.useState("")
-    // var title = "Hello"
-    // setTitle("Hello")
-
     const [desc, setDesc] = React.useState("")
+    const [checked, setChecked] = React.useState(false)
 
     const handleTitleChange = (e, { value }) => {
         console.log(value)
@@ -20,8 +18,9 @@ export default function TestPage() {
     }
 
     const handleCheckboxClick = (e, { value }) => {
-        console.log(value)
+        setChecked(!checked)
     }
+
     return (
         <>
             <Image id="brocade-img" src={img1} />
@@ -33,7 +32,7 @@ export default function TestPage() {
                     {desc}
                     <Form.TextArea label='Description' placeholder='Tell us about your image...' onChange={handleDesChange} />
                     <Form.Field>
-                        <Checkbox label='I agree to the Terms and Conditions' onClick={handleCheckboxClick} />
+                        <Checkbox label='I agree to the Terms and Conditions' onChange={handleCheckboxClick} />
                     </Form.Field>
                     <Button type='submit'>Submit</Button>
                 </Form>
